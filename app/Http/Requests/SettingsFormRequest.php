@@ -49,7 +49,7 @@ if ($this->has('logo')==true){
      */
     public function getData()
     {
-        $data = $this->only(['title','meta','keyword','mobile','email','logo_alt','address','copy_right']);
+        $data = $this->only(['title','meta','keyword','mobile','email','logo_alt','address','copy_right','benefit']);
 
 
 

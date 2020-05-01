@@ -23,6 +23,16 @@
     </div>
 </div>
 
+
+<div class="form-group {{ $errors->has('benefit') ? 'has-error' : '' }}">
+    {!! Form::label('benefit',trans('settings.benefit'),['class' => 'col-md-2 control-label']) !!}
+    <div class="col-md-10">
+        {!! Form::textarea('benefit', null, ['class' => 'form-control', 'placeholder' => trans('settings.benefit'), ]) !!}
+        {!! $errors->first('benefit', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+
 <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }}">
     {!! Form::label('mobile',trans('settings.mobile'),['class' => 'col-md-2 control-label']) !!}
     <div class="col-md-10">

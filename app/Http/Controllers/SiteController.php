@@ -34,4 +34,12 @@ class SiteController extends Controller
            return redirect('/');
         }
     }
+
+    public function onlineCourse()
+    {
+        $allocations = Allocation::where('is_active', '2')->where('is_online_home','1')->orderBy('last_date', 'desc')->get();
+
+        return view('course.online-course',compact('allocations'));
+
+    }
 }

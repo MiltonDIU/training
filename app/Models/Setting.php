@@ -39,7 +39,8 @@ class Setting extends Model
                   'logo',
                   'logo_alt',
                   'address',
-                  'copy_right'
+                  'copy_right',
+                'benefit'
               ];
 
     /**

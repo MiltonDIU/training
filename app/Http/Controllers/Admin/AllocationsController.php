@@ -55,7 +55,7 @@ class AllocationsController extends Controller
     {
         try {
             DB::beginTransaction();
-            $data = $request->only('course_id', 'batch_id', 'venue_id', 'last_date', 'course_start_date', 'course_end_date', 'total_hour', 'total_class', 'fees', 'discount_fees');
+            $data = $request->only('course_id', 'batch_id', 'venue_id', 'last_date', 'course_start_date', 'course_end_date', 'total_hour', 'total_class', 'fees', 'discount_fees','online_fees','is_online_home','contact_person');
 
             if ($request->input('is_active')) {
                 $data['is_active'] = $request->input('is_active');
@@ -153,7 +153,7 @@ class AllocationsController extends Controller
 
         try {
             DB::beginTransaction();
-            $data = $request->only('venue_id', 'last_date', 'course_start_date', 'course_end_date', 'total_hour', 'total_class', 'fees', 'discount_fees','is_active');
+            $data = $request->only('venue_id', 'last_date', 'course_start_date', 'course_end_date', 'total_hour', 'total_class', 'fees', 'discount_fees','is_active','online_fees','is_online_home','contact_person');
             if ($request->input('is_schedule')) {
                 $data['is_schedule'] = 1;
             } else {

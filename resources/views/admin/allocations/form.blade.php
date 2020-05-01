@@ -97,6 +97,21 @@
         {!! $errors->first('discount_fees', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
+<div class="form-group {{ $errors->has('online_fees') ? 'has-error' : '' }}">
+    {!! Form::label('online_fees','Online Course Fees',['class' => 'col-md-2 control-label']) !!}
+    <div class="col-md-10">
+        {!! Form::number('online_fees',null, ['class' => 'form-control', 'min' => '-999999', 'max' => '999999', 'placeholder' => 'Enter Online Course Fees...','step' => "any", ]) !!}
+        {!! $errors->first('online_fees', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('contact_person') ? 'has-error' : '' }}">
+    {!! Form::label('contact_person','Contact Person',['class' => 'col-md-2 control-label']) !!}
+    <div class="col-md-10">
+        {!! Form::text('contact_person',null, ['class' => 'form-control', 'placeholder' => 'Enter Course Contact Person Mobile...','step' => "any", ]) !!}
+        {!! $errors->first('contact_person', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
 
 
 <div class="form-group">
@@ -183,6 +198,25 @@
         </div>
 
         {!! $errors->first('is_schedule', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('is_online_home') ? 'has-error' : '' }}">
+    {!! Form::label('is_online_home','This course show on online course page',['class' => 'col-md-2 control-label']) !!}
+    <div class="col-md-10">
+        <div class="checkbox">
+            <label for='is_active'>
+
+                {!! Form::radio('is_online_home', '0',  (old('is_online_home', optional($allocation)->is_online_home) == '0' ? true : null) , ['id' => 'is_online_home', 'class' => '', ]) !!}
+                No
+                &nbsp
+                {!! Form::radio('is_online_home', '1',  (old('is_online_home', optional($allocation)->is_online_home) == '1' ? true : null) , ['id' => 'is_online_home', 'class' => '', ]) !!}
+                Yes
+                &nbsp
+            </label>
+        </div>
+
+        {!! $errors->first('is_online_home', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 

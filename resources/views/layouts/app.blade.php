@@ -95,6 +95,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('courses') }}">{{ __('Courses') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/online-course') }}">Online Courses</a>
+                        </li>
+
                         {!! \App\Helpers\ConfigHelpers::program() !!}
 
                         <li class="nav-item">

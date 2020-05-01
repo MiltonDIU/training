@@ -26,6 +26,7 @@ Route::get('/clear-cache', function() {
 |--------------------------------------------------------------------------
 */
 Route::get('/', 'SiteController@index')->name('index');
+Route::get('/online-course', 'SiteController@onlineCourse')->name('onlineCourse');
 
 /*
 |--------------------------------------------------------------------------

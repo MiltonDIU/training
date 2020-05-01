@@ -18,9 +18,12 @@ class Allocation extends Model
         'total_class',
         'fees',
         'discount_fees',
+        'online_fees',
+        'is_online_home',
+        'contact_person',
         'is_active',
         'is_schedule',
-          'batch_is_show'
+        'batch_is_show'
     ];
     public function course(){
         return $this->belongsTo('App\Models\Course');

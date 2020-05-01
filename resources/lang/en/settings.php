@@ -40,5 +40,5 @@ return [
     'model_was_updated' => 'Setting was successfully updated!',
     'model_was_deleted' => 'Setting was successfully deleted!',
     'unexpected_error' => 'Unexpected error occurred while trying to process your request!',
-
+'benefit'=>'Course Benefit'
 ];
