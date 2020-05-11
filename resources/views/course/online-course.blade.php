@@ -28,11 +28,11 @@
         <thead>
         <tr>
             <th>S/N</th>
-            <th>Courses</th>
+            <th>Courses & Registration</th>
             <th>Offline Price</th>
-            <th>Online Price</th>
+            <th>Online Live Price</th>
             <th>Hours</th>
-            <th>Call for Details</th>
+            <th>Total Classes</th>
         </tr>
         </thead>
         <tbody>
@@ -49,53 +49,36 @@
                 <td> {{$allocation->fees}}     </td>
                 <td> {{$allocation->online_fees}}</td>
                 <td> {{$allocation->total_hour}}</td>
-                <td> {{$allocation->contact_person}}</td>
+                <td> {{$allocation->total_class}}</td>
             </tr>
         @endforeach
         </tbody>
     </table>
-
-    Join our Online Live Classes an enjoy 70% – 90% discounts…
 <br>
-    Success depends on the proper use of time…. Stay Home and Develop Skills
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+<br>
 </div>
+</div>
+<div class="row">
+    <div class="col-md-7 col-sm-7" >
+        <h3>Online Payment Guide</h3>
+        <img src="{{url('img/bkash.png')}}" alt="BKash"/>
+        <br/>
+        <br/>
 
-
-
-{{--                    <div class="col-md-4 col">--}}
-{{--                        <div class="card">--}}
-{{--                            <a href="{{route('courses.show',['id'=>$allocation->id,'slug'=>$allocation->course->slug])}}"--}}
-{{--                               title="{{$allocation->course->name}}">--}}
-{{--                                <img class="card-img-top"--}}
-{{--                                     src="{{ asset('assets/uploads/course/banner/'.$allocation->course->banner)}}"--}}
-{{--                                     alt="{{$allocation->course->name}}"></a>--}}
-{{--                            <div class="card-body">--}}
-
-{{--                                <h5 class="card-title"><a--}}
-{{--                                            href="{{route('courses.show',['id'=>$allocation->id,'slug'=>$allocation->course->slug])}}"--}}
-{{--                                            title="{{$allocation->course->name}}">{{$allocation->course->name}}--}}
-
-{{--                                        @if($allocation->batch_is_show==1)--}}
-{{--                                            ({{$allocation->batch->name}})--}}
-{{--                                        @endif--}}
-
-{{--                                    </a></h5>--}}
-
-{{--                                <p><i class="far fa-clock"></i> Total Hours: {{$allocation->total_hour}}</p>--}}
-
-
-{{--                            </div>--}}
-
-
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-            </div>
-
+    </div>
+    <div class="col-md-5 col-sm-5">
+        <img src="{{url('img/online.png')}}" align="center" alt="Online live class"/>
+        <br>
+        <br>
+        <h5> Online Payment Acknowledgement</h5>
+        <ul>
+            <li>Keep the payment transaction ID with you for future references</li>
+            <li>If you pay with registration, please submit your transaction ID</li>
+            <li>If you don’t pay instantly, just register and later on when your registration is done, contact to Skill Jobs Accounts Section and confirm your registration, texting transaction ID.
+            </li>
+        </ul>
+    </div>
+</div>
 
 </div>
 @endsection

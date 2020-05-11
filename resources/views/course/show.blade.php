@@ -52,9 +52,15 @@
                                     <strike style="color: red">TK {{$allocation->fees}}</strike>
                                     TK {!! ($allocation->fees-$allocation->discount_fees) !!}
                                 @else
-                                    TK {{$allocation->fees}}
+                                   Offline: TK {{$allocation->fees}}
                                 @endif
                             </h2>
+                            @if($allocation->online_fees!=null)
+                               <h2 class="font-weight-bold">
+                                   Online: TK {!! ($allocation->online_fees) !!}
+                               </h2>
+
+                            @endif
                             <p class="lead">
                                 <i class="far fa-calendar-alt"></i> <strong>Start Date
                                     : </strong> {{$allocation->course_start_date}} &nbsp<br>
